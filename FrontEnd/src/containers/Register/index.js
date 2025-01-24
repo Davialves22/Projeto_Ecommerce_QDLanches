@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify'
+import { Link } from "react-router-dom";
 
 import api from "../../services/api"
 
@@ -115,8 +116,10 @@ function Register() {
                     }}>Cadastrar</Button>
                 </form>
 
-                <SingInLink>Já possui conta?
-                    <a>Fazer Login</a>
+                <SingInLink>Já possui conta? {" "}
+                    <Link style={{color: 'white'}} to="/login">
+                        Fazer Login
+                    </Link>
                 </SingInLink>
 
             </ContainerItens>

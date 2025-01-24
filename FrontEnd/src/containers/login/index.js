@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify'
+import { Link,  useNavigate } from 'react-router-dom'
 
 import api from "../../services/api"
 
@@ -26,6 +27,7 @@ import Button from "../../components/Button";
 
 
 function Login() {
+    const navigate = useNavigate()
     const { putUserData } = useUser()
 
     const schema = Yup.object().shape({
@@ -60,6 +62,11 @@ function Login() {
         )
 
         putUserData(data)
+
+        setTimeout(() => {
+            navigate('/')
+        }, 2000)
+
     }
 
     return (
@@ -88,8 +95,10 @@ function Login() {
                     }}>Login</Button>
                 </form>
 
-                <SingInLink>Não possui conta?
-                    <a>Fazer Cadatsro</a>
+                <SingInLink>Não possui conta? {' '}
+                    <Link style={{ color: 'white' }} to="/cadastro">
+                        Fazer Cadatsro
+                    </Link>
                 </SingInLink>
 
             </ContainerItens>
