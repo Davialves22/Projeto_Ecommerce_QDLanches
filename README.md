@@ -1,6 +1,10 @@
 # 🍔 Que Delícia Lanches - Sabor & Qualidade
-![image](https://github.com/user-attachments/assets/7c01dd31-7130-4715-b98c-1702cb586e3f)
-![image](https://github.com/user-attachments/assets/afa06082-27c1-4253-a97e-455fbe3a44d3)
+![image](https://github.com/user-attachments/assets/b95d388e-ce98-49e2-bdae-453af56f5750)
+
+![image](https://github.com/user-attachments/assets/5ca7c024-5694-48a1-b126-f0a07d1a6be2)
+
+
+![image](https://github.com/user-attachments/assets/ec0bfa3c-510a-46ab-aefe-68f03287eed5)
 
 
 
@@ -17,6 +21,8 @@ Nossa plataforma foi construída com as seguintes tecnologias:
 * **CSS/Styled Components** - Visual personalizado
 
 ## ✨ Funcionalidades
+
+![image](https://github.com/user-attachments/assets/ec0bfa3c-510a-46ab-aefe-68f03287eed5)
 
 * **Cardápio Digital**
   * Navegação por categorias de lanches
