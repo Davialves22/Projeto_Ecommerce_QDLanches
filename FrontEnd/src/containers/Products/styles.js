@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
+background-color: #e5e5e5;
 `
 
 export const ProductsImg = styled.img`
@@ -28,4 +28,12 @@ padding-bottom: 5px;
 font-size: 17px;
 line-height: 20px;
 `
-export const ProductsContainer = styled.div``
+export const ProductsContainer = styled.div`
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+padding: 40px;
+justify-items: center;
+margin-top: 20px;
+
+`

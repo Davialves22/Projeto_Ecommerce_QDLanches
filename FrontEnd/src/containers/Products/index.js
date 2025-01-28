@@ -3,11 +3,11 @@ import ProductsLogo from '../../assets/ProductsImg.jpg'
 import { Container, ProductsImg, CategoryButton, CategoriesMenu, ProductsContainer } from "./styles";
 import api from '../../services/api'
 import CardProducts from "../../components/CardProduct";
+import formatCurrency from "../../utils/formatCurrency";
 
 function Products() {
     const [categories, setCategories] = useState([])
     const [products, setProducts] = useState([])
-
     const [activeCategory, setActiveCategory] = useState(0)
 
 
@@ -19,13 +19,15 @@ function Products() {
             setCategories(newCategories)
         }
 
-        loadCategories()
 
         async function loadProducts() {
-            const { data } = await api.get('products')
+            const { data: allProducts } = await api.get('products')
 
-            console.log(data)
-            setProducts(data)
+        const newProducts = allProducts.map(product => {
+                return { ...product, formatedPrice: formatCurrency(product.price) }
+            })
+            
+            setProducts(newProducts)
         }
 
         loadProducts()
