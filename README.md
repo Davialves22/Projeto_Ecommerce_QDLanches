@@ -3,8 +3,9 @@
 
 ![image](https://github.com/user-attachments/assets/5ca7c024-5694-48a1-b126-f0a07d1a6be2)
 
-
 ![image](https://github.com/user-attachments/assets/ec0bfa3c-510a-46ab-aefe-68f03287eed5)
+
+![image](https://github.com/user-attachments/assets/3b67fb46-65bd-4742-a640-4fc24f37bc81)
 
 
 
@@ -25,6 +26,8 @@ Nossa plataforma foi construída com as seguintes tecnologias:
 ![image](https://github.com/user-attachments/assets/ec0bfa3c-510a-46ab-aefe-68f03287eed5)
 
 * **Cardápio Digital**
+* ![image](https://github.com/user-attachments/assets/2eb3c29b-3862-4c8e-b554-86eda2e6d3b4)
+
   * Navegação por categorias de lanches
   * Fotos apetitosas em alta qualidade
   * Descrição completa dos ingredientes
