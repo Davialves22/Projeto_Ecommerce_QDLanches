@@ -4,6 +4,7 @@ import Login from "../containers/login";
 import Register from "../containers/Register";
 import Home from "../containers/Home";
 import PrivateRoute from "./private-route";
+import Products from "../containers/Products";
 
 function RoutesComponent() {
     return (
@@ -14,6 +15,9 @@ function RoutesComponent() {
 
                 <Route path="/"
                     element={<PrivateRoute element={Home} />}
+                />
+                <Route path="/produtos"
+                    element={<PrivateRoute element={Products} />}
                 />
             </Routes>
         </Router>
