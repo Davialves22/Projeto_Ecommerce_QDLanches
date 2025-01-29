@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import { Link } from "react-router-dom";
 
 import api from "../../services/api"
+import { Button } from "../../components";
 
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -22,7 +23,6 @@ import {
     SingInLink
 } from "./styles";
 
-import Button from "../../components/Button";
 
 const onSubmit = async userData => {
     try {
@@ -47,7 +47,7 @@ const onSubmit = async userData => {
 
 }
 
-function Register() {
+export function Register() {
 
     const schema = Yup.object().shape({
         name: Yup.string("Nome é obrigatório").required("Nome é obrigatório"),
@@ -117,7 +117,7 @@ function Register() {
                 </form>
 
                 <SingInLink>Já possui conta? {" "}
-                    <Link style={{color: 'white'}} to="/login">
+                    <Link style={{ color: 'white' }} to="/login">
                         Fazer Login
                     </Link>
                 </SingInLink>
@@ -126,5 +126,3 @@ function Register() {
         </Container>
     );
 }
-
-export default Register

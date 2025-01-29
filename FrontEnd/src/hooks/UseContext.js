@@ -6,13 +6,13 @@ const UserContext = createContext({})
 export const UserProvider = ({ children }) => {
     const [userData, setUserData] = useState({})
 
-    //função que grava os dados
+    
     const putUserData = async userInfo => {
         setUserData(userInfo)
         await localStorage.setItem('QDLanches:userData', JSON.stringify(userInfo))
     }
 
-    //função que recupera os dados
+    
     useEffect(() => {
 
         const loadUserData = async () => {

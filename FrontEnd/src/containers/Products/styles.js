@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-background-color: #e5e5e5;
+background-color:rgb(185, 185, 185);
+min-height: 100vh;
 `
 
 export const ProductsImg = styled.img`
@@ -20,7 +21,7 @@ margin-top: 20px;
 
 export const CategoryButton = styled.button`
 cursor: pointer;
-color: ${props => (props.isActiveCategory ? '#D93D04' : '#9a9a9d')};
+color: ${props => (props.isActiveCategory ? '#D93D04' : '#591708')};
 background: none;
 border: none;
 border-bottom: ${props => (props.isActiveCategory && '2px solid #D93D04')};

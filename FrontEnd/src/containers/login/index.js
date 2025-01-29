@@ -23,10 +23,10 @@ import {
     SingInLink
 } from "./styles";
 
-import Button from "../../components/Button";
+import {Button} from "../../components";
 
 
-function Login() {
+export function Login() {
     const navigate = useNavigate()
     const { putUserData } = useUser()
 
@@ -105,5 +105,3 @@ function Login() {
         </Container>
     );
 }
-
-export default Login

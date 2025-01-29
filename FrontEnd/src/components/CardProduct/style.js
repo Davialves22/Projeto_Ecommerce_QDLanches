@@ -35,7 +35,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 21px;
-color:rgb(7, 101, 29); ;
+color:rgb(7, 101, 29);
 margin-top: 30px;
 `
 
