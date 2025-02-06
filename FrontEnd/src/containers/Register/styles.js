@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../../components";
 
 import Background from '../../assets/padrao-com-hamburgueres-cinza-e-vermelhos-em-fundo-preto_124800-1611.avif'
 
@@ -7,9 +8,16 @@ export const Container = styled.div`
     width: 100vw;
     background: url('${Background}');
     background-size: auto;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 768px) {
+        height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+    }
 
 `
 
@@ -20,6 +28,10 @@ export const RegisterImage = styled.img`
     width: 400px;
     object-fit: cover;
     border-radius: 10px 0px 0px 10px ;
+    
+    @media (max-width: 768px) {
+        display: none;
+    }
 
 `
 
@@ -55,6 +67,16 @@ export const ContainerItens = styled.div`
         color: #ffffff;
         margin-top: 15px;
     }
+
+    @media (max-width: 768px) {
+        align-items: center;
+        max-width: 90%;
+        height: auto;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+        margin-top: 12px;
+    }
 `;
 
 export const IMG = styled.img`
@@ -75,6 +97,10 @@ export const Label = styled.p`
     margin-top: ${props => (props.error ? '12px' : '16px')};
     margin-bottom: 5px;
 
+    @media (max-width: 768px) {
+        font-size: 14px;
+        text-align: center;
+    }
 
 `
 
@@ -90,6 +116,13 @@ border-radius: 5px;
 border: ${props => (props.error ? '2px solid #CC1717' : 'none')};
 padding-left: 10px;
 box-sizing: border-box;
+
+@media (max-width: 768px) {
+    width: 100%;
+    max-width: 250px;
+    max-height: 30px;
+    padding: 10px;
+    }
 `
 
 export const ErrorMessage = styled.p`
@@ -101,6 +134,19 @@ color: white;
 margin-top: 2px;
 padding: 2px 5px;
 border-radius: 5px;
+
+@media (max-width: 768px) {
+    text-align: center;
+    }
+`
+
+export const StyledButton = styled(Button)`
+    @media (max-width: 768px) {
+        margin: 20px auto; 
+        width: 80%;
+        max-width: 120px;
+        box-sizing: border-box;
+    }
 `
 
 export const SingInLink = styled.p`

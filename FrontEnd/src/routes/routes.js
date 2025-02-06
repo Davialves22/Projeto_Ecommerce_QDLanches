@@ -10,12 +10,10 @@ function RoutesComponent() {
                 <Route path="/login" element={<Login/>} />
                 <Route path="/cadastro" element={<Register/>} />
 
-                <Route path="/"
-                    element={<PrivateRoute element={Home} />}
-                />
-                <Route path="/produtos"
-                    element={<PrivateRoute element={Products} />}
-                />
+                <Route path="/produtos" element={<Products/>} />
+
+                <Route path="/" element={<Home/>} />
+                
                 <Route path="/carrinho"
                     element={<PrivateRoute element={Cart} />}
                 />

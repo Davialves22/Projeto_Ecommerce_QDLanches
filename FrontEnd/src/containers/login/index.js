@@ -20,7 +20,8 @@ import {
     Label,
     Input,
     ErrorMessage,
-    SingInLink
+    SingInLink,
+    StyledButton
 } from "./styles";
 
 import {Button} from "../../components";
@@ -89,10 +90,10 @@ export function Login() {
                         error={errors.email?.message} />
                     <ErrorMessage>{errors.password?.message}</ErrorMessage>
 
-                    <Button type="submit" style={{
+                    <StyledButton type="submit" style={{
                         marginTop: 20,
                         marginBottom: 25
-                    }}>Login</Button>
+                    }}>Login</StyledButton>
                 </form>
 
                 <SingInLink>Não possui conta? {' '}

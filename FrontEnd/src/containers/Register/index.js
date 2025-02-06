@@ -20,7 +20,8 @@ import {
     Label,
     Input,
     ErrorMessage,
-    SingInLink
+    SingInLink,
+    StyledButton
 } from "./styles";
 
 
@@ -110,10 +111,10 @@ export function Register() {
                     <ErrorMessage>{errors.ConfirmPassword?.message}</ErrorMessage>
 
 
-                    <Button type="submit" style={{
+                    <StyledButton type="submit" style={{
                         marginTop: 15,
                         marginBottom: 15
-                    }}>Cadastrar</Button>
+                    }}>Cadastrar</StyledButton>
                 </form>
 
                 <SingInLink>Já possui conta? {" "}
