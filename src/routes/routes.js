@@ -11,7 +11,7 @@ function RoutesComponent() {
                 <Route path="/cadastro" element={<Register/>} />
                 <Route path="/produtos" element={<Products/>} />
                 <Route path="/" element={<Home/>} />
-                
+                    
                 <Route path="/carrinho"
                     element={<PrivateRoute element={Cart} />}
                 />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header, Body } from "./styles";
+import { Container, Header, Body, EmptyCart } from "./styles";
 import { useCart } from "../../hooks/CartContext";
 import formatCurrency from "../../utils/formatCurrency";
 
@@ -17,19 +17,24 @@ export function CartItems() {
                 <p></p>
                 <p>Itens</p>
                 <p>Preço</p>
-                <p>Quantidade</p>
+                <p style={{paddingRight: 30}}>Quantidade</p>
                 <p>Total</p>
             </Header>
 
-            {cartProducts && cartProducts.map(product => (
-                <Body key={product.id}>
-                    <img src={updateImageUrl(product.url)} alt={`Imagem do produto ${product.name}`} />
-                    <p>{product.name}</p>
-                    <p>{formatCurrency(product.price)}</p>
-                    <p>{product.quantity}</p>
-                    <p>{formatCurrency(product.quantity * product.price)}</p>
-                </Body>
-            ))}
+            {cartProducts && cartProducts.length > 0 ?
+                cartProducts.map(product => (
+                    <Body key={product.id}>
+                        <img src={updateImageUrl(product.url)} alt={`Imagem do produto ${product.name}`} />
+                        <p>{product.name}</p>
+                        <p>{formatCurrency(product.price)}</p>
+                        <p>{product.quantity}</p>
+                        <p>{formatCurrency(product.quantity * product.price)}</p>
+                    </Body>
+                ))
+                : (
+                    <EmptyCart>Ops! Carrinho Vazio</EmptyCart>
+                )
+            }
         </Container>
     )
 
