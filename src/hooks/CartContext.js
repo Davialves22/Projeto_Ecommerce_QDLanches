@@ -7,6 +7,13 @@ export const CartProvider = ({ children }) => {
     const [cartProducts, setCartProducts] = useState([])
 
 
+    const updateLocalStorage = async products => {
+        await localStorage.setItem(
+            'QDLanches:cartInfo',
+            JSON.stringify(products))
+    }
+
+
     const putProductsInCart = async product => {
         const cartIndex = cartProducts.findIndex(prd => prd.id === product.id)
 
@@ -24,9 +31,7 @@ export const CartProvider = ({ children }) => {
             setCartProducts(newCartProducts)
         }
 
-        await localStorage.setItem(
-            'QDLanches:cartInfo',
-            JSON.stringify(newCartProducts))
+        await updateLocalStorage(newCartProducts)
     }
 
 
@@ -35,9 +40,7 @@ export const CartProvider = ({ children }) => {
 
         setCartProducts(newCart)
 
-        await localStorage.setItem(
-            'QDLanches:cartInfo',
-            JSON.stringify(newCart))
+        await updateLocalStorage(newCart)
     }
 
     const increaseProducts = async productId => {
@@ -50,9 +53,7 @@ export const CartProvider = ({ children }) => {
         setCartProducts(newCart)
 
 
-        await localStorage.setItem(
-            'QDLanches:cartInfo',
-            JSON.stringify(newCart))
+        await updateLocalStorage(newCart)
     }
 
 
@@ -75,7 +76,7 @@ export const CartProvider = ({ children }) => {
             await localStorage.setItem(
                 'QDLanches:cartInfo',
                 JSON.stringify(newCart))
-        } else{
+        } else {
             deleteProducts(productId)
         }
 

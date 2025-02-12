@@ -37,8 +37,8 @@ padding: 35px 0;
 `
 
 export const CategoryImg = styled.img`
-width: 412px;
-height: 71px;
+width: 300px;
+height: 60px;
 `
 
 export const ContainerItems = styled.div`
@@ -47,10 +47,11 @@ flex-direction: column;
 `
 
 export const Image = styled.img`
-width: 200px;
-height: 200px;
+width: 150px;
+height: 150px;
 border-radius: 10px;
 box-shadow: 3px 3px 10px rgba(24, 144, 226, 0.19);
+margin-top: 40px;
 `
 
 export const Button = styled.button`

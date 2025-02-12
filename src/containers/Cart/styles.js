@@ -12,3 +12,10 @@ width: 100%;
 height: 370px;
 overflow: hidden;
 `
+
+export const Wrapper = styled.div`
+display: flex;
+justify-content: space-evenly;
+margin-top: 30px;
+padding-bottom: 20px;
+`
