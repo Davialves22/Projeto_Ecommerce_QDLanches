@@ -23,7 +23,7 @@ export function CartResume() {
         const order = cartProducts.map(product => {
             return { id: product.id, quantity: product.quantity }
         })
-
+        
         try {
             await toast.promise(apiQdLanches.post('orders', { products: order }), {
                 pending: 'Realizando seu pedido...',
